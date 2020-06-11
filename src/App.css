@@ -1,32 +1,92 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap'); */
+
 .App {
+  background-image: url("./cafe.jpg");
+  background-size: cover;
+  background-position: cover;
   text-align: center;
+  width:100%;
+  min-height:100vh;
+  color: #ffffff;
+  
+}
+.overlay{
+  position: absolute;
+  background-color: rgba(104,111,122,.4);
+  min-height:100vh;
+  width: 100%;
+  z-index: 0;
+}
+.onTopLayer{
+  z-index: 2;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.clockingSys{
+  margin: 10%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+}
+.btn-primary{
+  color: #ffffff;
+  background-color: transparent !important;
+  border-color:transparent  !important;
+  box-shadow:none !important;
+  font-size: 30px;
+}
+.btn:hover{
+
+}
+.dropdown{
+  font-weight: 400;
 }
 
+h1{
+  padding-top:  120px;
+  font-size: 440%;
+  font-family: 'Abril Fatface', cursive;
+}
 .clockingButton {
-  background-color:#5cbf2a;
+  flex-grow: 0;
+  background-color:#6BBE60;
   border-radius:10px;
-  /* display:inline-block; */
+  font-size: 25px;
   cursor:pointer;
   color:#ffffff;
-  font-family:Arial;
-  font-size:18px;
+  /* font-size:18px; */
   margin: 0% 2%;
   width: 25%;
   text-decoration:none;
  
 }
+@media only screen and (max-width: 780px) {
+  .dateNtime{
+    font-family:'Share Tech Mono', monospace;
+    margin:5% 28%;
+    border: 5px solid rgba(216,213,208,5.75);
+  }
+  #date{
+      margin: 5% 20%;
+  }
+}
+@media only screen and (min-width: 780px) {
+  .dateNtime{    
+  margin: 5% 38%;
+  border: 5px solid rgba(216,213,208,5.75);
+  border-radius: 0px 1px 0px 0px;
+  padding: 1% 0%;
+  font-family:'Share Tech Mono', monospace;
+  }
+  #date{
+    margin: 5% 20%;
+  }
+}
 
 #out{
-	background-color:#CC2D21;
+	background-color:#BA4A3B;
 }
 #out:hover{
-    background-color:#cc432b;
+  background-color:#cc432b;
 }
-
-
 

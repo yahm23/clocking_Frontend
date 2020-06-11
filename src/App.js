@@ -8,10 +8,13 @@ import StaffModal from './comps/modal';
 function App() {
   return (
     <div className="App">
-      <p>Hello World</p>
-      <DateTime></DateTime>
-      <DropdownStaff></DropdownStaff>
-      <StaffModal></StaffModal>
+      <div className="overlay"></div>
+      <div className="onTopLayer"> 
+        <h1>Bob's Coffee Shop</h1>
+        <DropdownStaff></DropdownStaff>
+        <DateTime></DateTime>
+        <StaffModal></StaffModal>
+      </div>
     </div>
   );
 }

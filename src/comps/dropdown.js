@@ -1,4 +1,7 @@
 import React, { useState , useEffect, setErrors } from 'react'
+import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
 
 export const DropdownStaff = ()=>{
     var [allStaff,setStaff] = useState('');
@@ -27,7 +30,7 @@ export const DropdownStaff = ()=>{
 
 
     const handleChange = (event) => {
-        let ID = event.target.value;
+        let ID = event;
         setSpecificStaff(allStaff.find(staff=>(staff._id===ID)))
        
     }
@@ -104,15 +107,16 @@ export const DropdownStaff = ()=>{
     
     if(allStaff){
         return (
-            <div>
-            
-                <select onChange={handleChange} className="select-css">    
-                        <option   defaultValue >Select Name</option>
+            <div className="clockingSys">
+                <Dropdown>
+
+                    <DropdownButton title={specificStaff.name? specificStaff.name:"Select Name"} onSelect={handleChange} >
                         {allStaff.map(person=>(
-                            <option value={person._id} key={person._id}>{person.name}</option>
-                        ))}
-                </select>
-                
+                            <Dropdown.Item value={person._id} eventKey={person._id}>{person.name}</Dropdown.Item>
+                            ))}
+                    </DropdownButton>
+                </Dropdown>
+
                 <> {specificStaff.clockedIn?      
                 <button onClick={handleClick} className="clockingButton" id="out">Clock Out</button>  
                 :
