@@ -87,8 +87,11 @@ form{
   justify-content: space-around;
 }
 
-.submito{
-
+.modal-title, label, button{
+  font-family: 'Open Sans', sans-serif;
+}
+input{
+  margin:0px 5px;
 }
 
 #out{
