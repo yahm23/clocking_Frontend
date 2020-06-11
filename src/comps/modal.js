@@ -24,7 +24,7 @@ const StaffModal = ()=>{
                 <Modal.Body> <AddStaff></AddStaff></Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button className="submito" variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
                 </Modal.Footer>

@@ -82,6 +82,14 @@ h1{
     margin: 5% 20%;
   }
 }
+form{
+  display: flex;
+  justify-content: space-around;
+}
+
+.submito{
+
+}
 
 #out{
 	background-color:#BA4A3B;

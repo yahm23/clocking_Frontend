@@ -32,8 +32,10 @@ export const AddStaff= ()=> {
         <div>
             <form onSubmit={handleSubmit}>
                 <label>Full Name:</label>
-                <input required onChange={nameUpdate}></input>
-                <button type="submit"> Submit</button>
+                <div>
+                    <input required onChange={nameUpdate}></input>
+                    <button type="submit"> Submit</button>
+                </div>
             </form>
         </div>
     )
